@@ -1,4 +1,4 @@
-APP_NAME=hello_name
+APP_NAME=math_operations
 
 .PHONY: build
 build: clear

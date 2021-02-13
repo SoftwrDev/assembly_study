@@ -1,8 +1,10 @@
+APP_NAME=hello
+
 .PHONY: build
 build: clear
-	@nasm -f elf64 -o hello.o hello.asm && \
+	@nasm -f elf64 -o $(APP_NAME).o $(APP_NAME).asm && \
 	mkdir -p bin && \
-	ld hello.o -o bin/hello && \
+	ld $(APP_NAME).o -o bin/$(APP_NAME) && \
 	rm *.o
 
 .PHONY: clear
