@@ -5,12 +5,12 @@ section .text
 	global _start
 
 _start:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, text
-	mov rdx, 14
+	mov rax, 1    ; sys_write
+	mov rdi, 1    ; std_in
+	mov rsi, text ; data
+	mov rdx, 14   ; size of data
 	syscall
 
-	mov rax, 60
-	mov rdi, 0
+	mov rax, 60   ; sys_exit
+	mov rdi, 0    ; error code
 	syscall
