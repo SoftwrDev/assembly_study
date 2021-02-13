@@ -10,7 +10,7 @@ _start:
 
 _printHello:
 	mov rax, 1    ; sys_write
-	mov rdi, 1    ; std_in
+	mov rdi, 1    ; std_out
 	mov rsi, text ; data
 	mov rdx, 14   ; size of data
 	syscall
