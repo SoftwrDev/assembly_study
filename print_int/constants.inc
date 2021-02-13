@@ -1,0 +1,7 @@
+STD_IN equ 0
+STD_OUT equ 1
+STD_ERR equ 2
+
+SYS_READ equ 0
+SYS_WRITE equ 1
+SYS_EXIT equ 60
