@@ -1,6 +1,7 @@
 
 section .bss
     space resb 6
+    sizeof equ $-space
 
 section .text
     global _start
@@ -10,12 +11,12 @@ _start:
     mov rbx, "Hello"
     mov [rcx], rbx
 
-    mov [rcx + 5], byte 0xa ; Adds a \n to the end of the string
+    mov [rcx + (sizeof - 1)], byte 0xa ; Adds a \n to the end of the string
 
     mov rax, 1
     mov rdi, 1
     mov rsi, rcx
-    mov rdx, 6
+    mov rdx, sizeof
     syscall
 
     mov rax, 60
